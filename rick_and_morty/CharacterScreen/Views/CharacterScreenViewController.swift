@@ -18,7 +18,7 @@ class CharacterScreenViewController: UIViewController, UISearchResultsUpdating {
             return
         }
         // на каждый тык запрос - не очень круто, но проект учебный)
-        presenter.getData(status: self.status, gender: self.status, name: text)
+        presenter.getData(status: self.status, gender: self.gender, name: text)
     }
     
     
