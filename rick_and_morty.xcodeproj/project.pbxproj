@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16AF3583295DE402005E0604 /* EpisodeWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF3582295DE402005E0604 /* EpisodeWebModel.swift */; };
+		16AF3585295DF13B005E0604 /* EpisodesWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF3584295DF13B005E0604 /* EpisodesWebModel.swift */; };
+		16AF3587295DF2F4005E0604 /* LocationWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF3586295DF2F4005E0604 /* LocationWebModel.swift */; };
+		16AF3589295DF362005E0604 /* LocationsWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF3588295DF362005E0604 /* LocationsWebModel.swift */; };
+		16AF358B295DF4AD005E0604 /* CharactersWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF358A295DF4AD005E0604 /* CharactersWebModel.swift */; };
+		16AF358F295DF4F5005E0604 /* CharacterWebModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16AF358E295DF4F5005E0604 /* CharacterWebModel.swift */; };
 		24512782295A355D00354EC0 /* LocationScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24512781295A355D00354EC0 /* LocationScreenPresenter.swift */; };
 		24512785295A41DB00354EC0 /* EpisodeScreenPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24512784295A41DB00354EC0 /* EpisodeScreenPresenter.swift */; };
 		2465266029294E4B008F0410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2465265F29294E4B008F0410 /* AppDelegate.swift */; };
@@ -41,6 +47,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16AF3582295DE402005E0604 /* EpisodeWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeWebModel.swift; sourceTree = "<group>"; };
+		16AF3584295DF13B005E0604 /* EpisodesWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodesWebModel.swift; sourceTree = "<group>"; };
+		16AF3586295DF2F4005E0604 /* LocationWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationWebModel.swift; sourceTree = "<group>"; };
+		16AF3588295DF362005E0604 /* LocationsWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsWebModel.swift; sourceTree = "<group>"; };
+		16AF358A295DF4AD005E0604 /* CharactersWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharactersWebModel.swift; sourceTree = "<group>"; };
+		16AF358E295DF4F5005E0604 /* CharacterWebModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterWebModel.swift; sourceTree = "<group>"; };
 		24512781295A355D00354EC0 /* LocationScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationScreenPresenter.swift; sourceTree = "<group>"; };
 		24512784295A41DB00354EC0 /* EpisodeScreenPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EpisodeScreenPresenter.swift; sourceTree = "<group>"; };
 		2465265C29294E4B008F0410 /* rick_and_morty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rick_and_morty.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +219,8 @@
 			isa = PBXGroup;
 			children = (
 				2465268C292A6109008F0410 /* CharacterScreenModel.swift */,
+				16AF358A295DF4AD005E0604 /* CharactersWebModel.swift */,
+				16AF358E295DF4F5005E0604 /* CharacterWebModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -261,6 +275,8 @@
 			isa = PBXGroup;
 			children = (
 				2465269F292C1AB9008F0410 /* LocationScreenModel.swift */,
+				16AF3586295DF2F4005E0604 /* LocationWebModel.swift */,
+				16AF3588295DF362005E0604 /* LocationsWebModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -289,6 +305,8 @@
 			isa = PBXGroup;
 			children = (
 				246526AA292D25C8008F0410 /* EpisodeScreenModel.swift */,
+				16AF3582295DE402005E0604 /* EpisodeWebModel.swift */,
+				16AF3584295DF13B005E0604 /* EpisodesWebModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -382,6 +400,7 @@
 			files = (
 				24652688292A6058008F0410 /* CharacterScreenPresenter.swift in Sources */,
 				246526AD292D27A4008F0410 /* EpisodeScreenPanel.swift in Sources */,
+				16AF3583295DE402005E0604 /* EpisodeWebModel.swift in Sources */,
 				2465268129297D26008F0410 /* MainScreenAssemble.swift in Sources */,
 				2465266429294E4B008F0410 /* ViewController.swift in Sources */,
 				24512785295A41DB00354EC0 /* EpisodeScreenPresenter.swift in Sources */,
@@ -389,6 +408,7 @@
 				246526A6292C1E5F008F0410 /* LocationScreenPanel.swift in Sources */,
 				2465267D292953C0008F0410 /* MainScreenModel.swift in Sources */,
 				2465266029294E4B008F0410 /* AppDelegate.swift in Sources */,
+				16AF3585295DF13B005E0604 /* EpisodesWebModel.swift in Sources */,
 				2465267B292952F6008F0410 /* MainScreenButton.swift in Sources */,
 				2465267F29295424008F0410 /* MainScreenButtonType.swift in Sources */,
 				246526A4292C1D12008F0410 /* LocationScreenAssemble.swift in Sources */,
@@ -398,11 +418,15 @@
 				24652692292A8980008F0410 /* UIImageExtensions.swift in Sources */,
 				24652699292AC404008F0410 /* FilterViewController.swift in Sources */,
 				2465266229294E4B008F0410 /* SceneDelegate.swift in Sources */,
+				16AF358F295DF4F5005E0604 /* CharacterWebModel.swift in Sources */,
+				16AF358B295DF4AD005E0604 /* CharactersWebModel.swift in Sources */,
 				24652684292A5CB8008F0410 /* CharacterScreenAssemble.swift in Sources */,
 				24652697292ABEC2008F0410 /* RadioButton.swift in Sources */,
+				16AF3589295DF362005E0604 /* LocationsWebModel.swift in Sources */,
 				246526A2292C1B97008F0410 /* LocationScreenViewController.swift in Sources */,
 				24E8618A2958C7D2007D1238 /* FilterPresenter.swift in Sources */,
 				246526A0292C1AB9008F0410 /* LocationScreenModel.swift in Sources */,
+				16AF3587295DF2F4005E0604 /* LocationWebModel.swift in Sources */,
 				24512782295A355D00354EC0 /* LocationScreenPresenter.swift in Sources */,
 				2465269B292AC669008F0410 /* FilterScreenAssemble.swift in Sources */,
 				246526AB292D25C8008F0410 /* EpisodeScreenModel.swift in Sources */,

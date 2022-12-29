@@ -16,6 +16,6 @@ final class FilterPresenter: IFilterPresenter{
     
     func openCharactersScreen(status: String?, gender: String?) {
         let episodeScreenAssemble = CharacterScreenAssemble()
-        transitionHandler?.present(episodeScreenAssemble.assembly(status: nil, gender: nil, name: nil), animated: true)
+        transitionHandler?.present(episodeScreenAssemble.assembly(status: status, gender: gender, name: nil), animated: true)
     }
 }

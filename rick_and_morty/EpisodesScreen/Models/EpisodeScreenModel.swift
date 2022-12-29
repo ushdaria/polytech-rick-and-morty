@@ -8,6 +8,7 @@
 import Foundation
 
 struct EpisodeScreenModel {
+    
     let name: String
     let number: String
     let date: String

@@ -7,20 +7,40 @@
 
 import Foundation
 
+
+enum LocationsError: Error {
+    case invalidServerResponse
+}
+
 protocol ILocationScreenPresenter {
     func getData()
 }
 
 final class LocationScreenPresenter : ILocationScreenPresenter {
-    weak var characterDelegate: ILocationScreeenDelegate?
+    weak var locationDelegate: ILocationScreeenDelegate?
     
     func getData() {
-        // api call
-        var testData = [LocationScreenModel(name: "Earth", type: "planet", dimension: "Dimension C-137"),
-                        LocationScreenModel(name: "Mars", type: "dead planet", dimension: "Dimension C-139"),
-                        LocationScreenModel(name: "Jupyter", type: "loop planet", dimension: "Dimension A-137")
-                       ]
+        Task {
+            var data: LocationsWebModel = LocationsWebModel(results: []);
+            do {
+                data = try await getLocations()
+            } catch {
+                print(error)
+            }
+            
+            locationDelegate?.setData(data: data.results.map {LocationScreenModel(name: $0.name, type: $0.type, dimension: $0.dimension)})
+        }
+    }
+    
+    func getLocations() async throws -> LocationsWebModel {
+        let url = URL(string: "https://rickandmortyapi.com/api/location")!;
         
-        characterDelegate?.setData(data: testData)
+        let (data, response) = try await URLSession.shared.data(from: url);
+    
+        guard let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200 else {
+            throw LocationsError.invalidServerResponse
+        }
+        return try JSONDecoder().decode(LocationsWebModel.self, from: data)
     }
 }

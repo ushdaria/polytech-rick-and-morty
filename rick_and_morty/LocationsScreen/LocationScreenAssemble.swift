@@ -12,7 +12,7 @@ final class LocationScreenAssemble {
     func assembly()-> UIViewController {
         let presenter = LocationScreenPresenter()
         let viewController = LocationScreenViewController(presenter: presenter)
-        presenter.characterDelegate = viewController
+        presenter.locationDelegate = viewController
         let navVC = UINavigationController(rootViewController: viewController)
         navVC.modalPresentationStyle = .fullScreen
         return navVC

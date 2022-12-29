@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum EpisodesError: Error {
+    case invalidServerResponse
+}
+
 protocol IEpisodesScreenPresenter {
     func getData()
 }
@@ -15,9 +19,27 @@ final class EpisodesScreenPresenter : IEpisodesScreenPresenter {
     weak var episodeDelegate: IEpisodeScreenViewController?
     
     func getData() {
-        // api call
-        var testData = [EpisodeScreenModel(name: "Pilot", number: "S01E01", date: "December 2, 2013")]
+        Task {
+            var data: EpisodesWebModel = EpisodesWebModel(results: []);
+            do {
+                data = try await getEpisodes()
+            } catch {
+                print(error)
+            }
+            
+            episodeDelegate?.setData(data: data.results.map { EpisodeScreenModel(name: $0.name, number: $0.episode, date: $0.air_date)})
+        }
+    }
+    
+    func getEpisodes() async throws -> EpisodesWebModel {
+        let url = URL(string: "https://rickandmortyapi.com/api/episode")!;
         
-        episodeDelegate?.setData(data: testData)
+        let (data, response) = try await URLSession.shared.data(from: url);
+    
+        guard let httpResponse = response as? HTTPURLResponse,
+                httpResponse.statusCode == 200 else {
+            throw EpisodesError.invalidServerResponse
+        }
+        return try JSONDecoder().decode(EpisodesWebModel.self, from: data)
     }
 }
